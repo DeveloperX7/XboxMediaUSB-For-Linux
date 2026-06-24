@@ -42,32 +42,28 @@ Use the appropriate command for your distribution:
 -----------------------------------------
 | 🐧 Arch Linux                         |
 -----------------------------------------
-sudo pacman -S ntfs-3g attr parted python-pyqt5
-
+sudo pacman -S --noconfirm ntfs-3g attr parted wget unzip python-pip && pip install --user PyQt5 opencv-python realesrgan-ncnn-py
 -----------------------------------------
 | 🐧 Debian / Ubuntu / Linux Mint       |
 -----------------------------------------
 sudo apt update
-sudo apt install ntfs-3g attr parted python3-pyqt5
-
+sudo apt update && sudo apt install -y ntfs-3g attr parted wget unzip pipx && pipx ensurepath && source ~/.bashrc && pipx install PyQt5 opencv-python realesrgan-ncnn-py
 -----------------------------------------
 | 🪶 Fedora (standard)                  |
 -----------------------------------------
-sudo dnf install ntfs-3g attr parted python3-qt5
-
+sudo dnf install -y ntfs-3g attr parted wget unzip python3-pip && pip3 install --user PyQt5 opencv-python realesrgan-ncnn-py
 -----------------------------------------
 | 🔄 Fedora Atomic / Silverblue         |
 | (rpm-ostree system)                   |
 -----------------------------------------
-rpm-ostree install ntfs-3g attr parted python3-qt5
+rpm-ostree install ntfs-3g attr parted wget unzip && rpm-ostree reload && pip install --user PyQt5 opencv-python realesrgan-ncnn-py
 # Then reboot or run:
 rpm-ostree reload
 
 -----------------------------------------
 | 🐧 openSUSE (Leap / Tumbleweed)       |
 -----------------------------------------
-sudo zypper install ntfs-3g attr parted python3-qt5
-
+sudo zypper install -y ntfs-3g attr parted wget unzip python3-pip && pip3 install --user PyQt5 opencv-python realesrgan-ncnn-py
 -----------------------------------------
 | 🌿 Other distributions (generic)      |
 -----------------------------------------
@@ -84,5 +80,5 @@ Install the equivalent packages using your distribution's package manager:
 - 🧪 It is recommended to run the application from a terminal to see any error messages.
 
 ========== 5. 🏷️ Application Version ==========
-Version: 2.1 (supports Atomic and rpm-ostree distributions)
+Version: 2.2 (supports Atomic and rpm-ostree distributions)
 ==================================================
